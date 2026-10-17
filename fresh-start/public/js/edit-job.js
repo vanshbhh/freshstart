@@ -1,0 +1,3 @@
+// edit-job.html?id=...
+const id = new URLSearchParams(location.search).get('id');
+init('HR').then(ok => ok && act(async () => jobForm(await api('/jobs/' + id), id)));
